@@ -14,6 +14,10 @@ config/name="Platform game"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[global_group]
+
+GroupGround=""
+
 [input]
 
 move_left={
@@ -37,6 +41,8 @@ jump={
 [layer_names]
 
 2d_physics/layer_1="Floor"
+2d_physics/layer_2="Platforms"
+2d_physics/layer_10="Player"
 
 [rendering]
 
