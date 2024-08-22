@@ -96,7 +96,8 @@ animations = [{
 size = Vector2(17, 30)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 512
+z_index = 10
+collision_layer = 16
 collision_mask = 3
 script = ExtResource("1_xl3ku")
 metadata/_edit_group_ = true
