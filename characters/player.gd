@@ -3,6 +3,8 @@ class_name Player
 ## Skrypt zarządzający postacią gracza
 ##
 ## Znajdują się tu funkcje, które zarządzają animacją, kierunkiem poruszania się, skakaniem.
+## Obiekt 'Player' ma ustawioną wartość właściwości 'CanvasItem -> Ordering -> Z-index' na 10.
+## Zrobione jest to w celu wyświetlania postaci gracza zawsze nawierzchu gry
 
 #region Stałe i zmienne
 const SPEED = 200.0				# Szybkość gracza
