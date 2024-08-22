@@ -60,4 +60,8 @@ func _play_animation(direction : float):
 			_animated_sprite.play("idle")
 	else:
 		_animated_sprite.play("jump")
+		if direction > 0:
+			_animated_sprite.flip_h = false
+		elif direction < 0:
+			_animated_sprite.flip_h = true
 #endregion
