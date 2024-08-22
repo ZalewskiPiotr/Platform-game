@@ -102,7 +102,6 @@ sources/0 = SubResource("TileSetAtlasSource_tevy8")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yxjr5"]
 resource_name = "Platform static"
 scenes/1/scene = ExtResource("2_eqjlp")
-scenes/1/display_placeholder = ExtResource("2_eqjlp")
 scenes/4/scene = ExtResource("4_h8s7s")
 
 [sub_resource type="TileSet" id="TileSet_oubgh"]
@@ -125,15 +124,7 @@ tile_map_data = PackedByteArray("AAAEACEAAAABAAAAAAAFACEAAAABAAAAAAAGACEAAAABAAA
 tile_set = SubResource("TileSet_f5tc8")
 
 [node name="LayerPlatforms" type="TileMapLayer" parent="Layers"]
-tile_map_data = PackedByteArray("AAAJAB4AAQAAAAAAAQAMABwAAQAAAAAABAA=")
 tile_set = SubResource("TileSet_oubgh")
 
 [node name="Player" parent="." instance=ExtResource("3_vi8m0")]
 position = Vector2(72, 504)
-
-[node name="PlatformMoving2" parent="." instance=ExtResource("4_h8s7s")]
-position = Vector2(270, 533)
-_move_speed = 1.0
-
-[node name="PlatformMoving3" parent="." instance=ExtResource("4_h8s7s")]
-position = Vector2(221, 493)
