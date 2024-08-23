@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://cst3hkp1gpj02"]
+[gd_scene load_steps=19 format=4 uid="uid://cst3hkp1gpj02"]
 
 [ext_resource type="Texture2D" uid="uid://dn527uwrjjomy" path="res://assets/terrain/nature-paltformer-tileset-16x16.png" id="1_7a6b7"]
 [ext_resource type="PackedScene" uid="uid://c0saeybj026ke" path="res://platforms/platform_static.tscn" id="2_eqjlp"]
 [ext_resource type="Texture2D" uid="uid://dbes4bgbkchtq" path="res://assets/terrain/staticObjects_.png" id="3_itnnx"]
 [ext_resource type="PackedScene" uid="uid://c25tp1j133pcx" path="res://characters/player.tscn" id="3_vi8m0"]
 [ext_resource type="PackedScene" uid="uid://d14lvtrucmf4" path="res://platforms/platform_moving_2.tscn" id="4_h8s7s"]
+[ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="6_bppp0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awlks"]
 texture = ExtResource("1_7a6b7")
@@ -235,6 +236,8 @@ texture = ExtResource("3_itnnx")
 sources/0 = SubResource("TileSetAtlasSource_5i5fw")
 sources/1 = SubResource("TileSetAtlasSource_c1ndh")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dk40v"]
+
 [node name="Level 1" type="Node"]
 
 [node name="Layers" type="Node" parent="."]
@@ -275,5 +278,12 @@ limit_left = 0
 limit_top = 0
 limit_right = 1150
 limit_bottom = 640
+
+[node name="KillZone" parent="." instance=ExtResource("6_bppp0")]
+position = Vector2(93, 647)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+shape = SubResource("WorldBoundaryShape2D_dk40v")
 
 [editable path="Player"]
