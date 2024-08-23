@@ -269,3 +269,11 @@ _move_speed = 1.5
 
 [node name="Player" parent="." instance=ExtResource("3_vi8m0")]
 position = Vector2(44, 529)
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 640
+
+[editable path="Player"]
