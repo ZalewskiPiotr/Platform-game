@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://kn4wkgh0chl7"]
+[gd_scene load_steps=18 format=4 uid="uid://kn4wkgh0chl7"]
 
 [ext_resource type="Texture2D" uid="uid://dn527uwrjjomy" path="res://assets/terrain/nature-paltformer-tileset-16x16.png" id="1_vior6"]
 [ext_resource type="PackedScene" uid="uid://c0saeybj026ke" path="res://platforms/platform_static.tscn" id="2_lx33k"]
 [ext_resource type="PackedScene" uid="uid://d14lvtrucmf4" path="res://platforms/platform_moving_2.tscn" id="3_wig36"]
 [ext_resource type="PackedScene" uid="uid://c25tp1j133pcx" path="res://characters/player.tscn" id="4_o21hk"]
 [ext_resource type="Texture2D" uid="uid://dbes4bgbkchtq" path="res://assets/terrain/staticObjects_.png" id="4_tml8i"]
+[ext_resource type="PackedScene" uid="uid://cq83g1aiyj14o" path="res://platforms/platform_moving.tscn" id="5_pmo4f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awlks"]
 texture = ExtResource("1_vior6")
@@ -261,6 +262,9 @@ tile_set = SubResource("TileSet_oubgh")
 
 [node name="LayerDecorations" type="TileMapLayer" parent="Layers"]
 tile_set = SubResource("TileSet_doo8t")
+
+[node name="PlatformMoving" parent="Layers" instance=ExtResource("5_pmo4f")]
+position = Vector2(167, 501)
 
 [node name="Player" parent="." instance=ExtResource("4_o21hk")]
 position = Vector2(192, 399)
