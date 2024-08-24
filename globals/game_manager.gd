@@ -4,8 +4,8 @@ extends Node
 var _score : int = 0
 
 func _ready() -> void:
-	GlobalEvents.coin_collected.connect(add_point)
+	GlobalEvents.coin_collected.connect(_add_point)
 
-func add_point() -> void:
-	print("point for coin added. Total point: ", str(_score))
+func _add_point() -> void:
 	_score += 1
+	print("point for coin added. Total point: ", str(_score))
