@@ -11,4 +11,5 @@ class_name Coin
 func _on_body_entered(body: Node2D) -> void:
 	print("coin collected")
 	GlobalEvents.coin_collected.emit()
+	AudioSfx.coin_collected()
 	self.queue_free()
