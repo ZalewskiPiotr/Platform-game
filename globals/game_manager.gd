@@ -8,4 +8,4 @@ func _ready() -> void:
 
 func _add_point() -> void:
 	_score += 1
-	print("point for coin added. Total point: ", str(_score))
+	print("point added. Total point: ", str(_score))
