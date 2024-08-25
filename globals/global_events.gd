@@ -5,5 +5,5 @@ extends Node
 
 ## Zebranie coina
 ## Emisja sygnału: coin.gd -> _on_body_entered()
-## Odbiór sygnału: gama_manager.gd -> _add_point()
+## Odbiór sygnału: game_manager.gd -> _add_point()
 signal coin_collected
