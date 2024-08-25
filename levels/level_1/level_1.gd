@@ -3,7 +3,7 @@ extends Node
 ##
 ## Dodatkowy opis :)
 
-#region Stałę i zmienne
+#region Stałe i zmienne
 @onready var _hud: CanvasLayer = $HUD	# Dostęp do HUD
 #endregion
 
