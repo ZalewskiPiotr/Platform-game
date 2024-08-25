@@ -13,6 +13,7 @@ var _score : int = 0	# Punkty gracza zdobywane w grze
 ## Załadowanie globalnych sygnałów
 func _ready() -> void:
 	GlobalEvents.coin_collected.connect(_add_point)
+	GlobalEvents.player_hit.connect(_on_player_hit)
 #endregion
 
 
@@ -21,8 +22,21 @@ func _ready() -> void:
 func get_score() -> int:
 	return _score
 
+## Metoda publiczna. Resetuje punkty gracza.
+func reset_score() -> void:
+	_score = 0
+	print("Punkty wyzerowane. Aktualne punkty: ", str(_score))
+
 ## Dodanie punktu
 func _add_point() -> void:
 	_score += 1
-	print("point added. Total point: ", str(_score))
+	print("Punkt dodany. Aktualne punkty: ", str(_score))
+	
+
 #endregion
+
+## Co się dzieje w momencie gdy gracz zostaje trafiony. Obecnie resetowane są punkty. Docelowo
+## powinno nastąpić wyjście do menu głównego gry
+func _on_player_hit() -> void:
+	print("Gracz został trafiony")
+	self.reset_score()
