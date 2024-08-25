@@ -17,6 +17,10 @@ func _ready() -> void:
 
 
 #region Zarządzanie punktami
+## Metoda publiczna. Podaje liczbę aktualnych punktów
+func get_score() -> int:
+	return _score
+
 ## Dodanie punktu
 func _add_point() -> void:
 	_score += 1
