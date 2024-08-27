@@ -6,7 +6,7 @@ extends Control
 
 ## Uruchomienie układu nr 1
 func _on_play_button_pressed() -> void:
-	GameManager.goto_scene("res://levels/level_1/level_1.tscn")
+	GameManager.goto_scene(GameManager.EnumScenes.LEVEL_1)
 
 
 ## Wyświetlenie strony z pomocą

@@ -6,6 +6,15 @@ extends Node
 ## Region 'Zarządzanie scenami' - Funkcje do zmiany scen
 
 
+#region Enumeratory
+enum EnumScenes {
+	START_PAGE, 
+	LEVEL_1,
+	LEVEL_2
+}
+#endregion
+
+
 #region Zmienne i stałe
 var _score : int = 0	# Punkty gracza zdobywane w grze
 var _current_scene : Node = null	# Aktualna scena
@@ -46,7 +55,7 @@ func _add_point() -> void:
 #region Zarządzanie scenami
 ## Funkcja zmienia aktualną scenę na podaną 
 ## @param: path - ścieżka do sceny, która ma być załadowana
-func goto_scene(path : String) -> void:
+func goto_scene(new_scene : EnumScenes) -> void:
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
 	# Deleting the current scene at this point is
@@ -55,9 +64,23 @@ func goto_scene(path : String) -> void:
 
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
+	var path : String = _get_path_to_scene(new_scene)
 	call_deferred("_deferred_goto_scene", path)
 
 
+## Funkcja na podstawie podanej wartości enumeratora zwraca ścieżkę do sceny
+## @param: scene - wartośc enumeratora dla ścieżki, która ma zostać zwrócona
+func _get_path_to_scene(scene : EnumScenes) -> String:
+	var path : String
+	if scene == EnumScenes.START_PAGE:
+		path = "res://scenes/start_page.tscn"
+	elif scene == EnumScenes.LEVEL_1:
+		path = "res://levels/level_1/level_1.tscn"
+	else:
+		path = ""
+	return path
+	
+	
 ## Zmiana sceny. Uusnięcie aktualnej sceny i załądowanie nowej	
 func _deferred_goto_scene(path : String) -> void:
 	# It is now safe to remove the current scene.
