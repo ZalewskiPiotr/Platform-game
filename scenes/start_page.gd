@@ -6,7 +6,7 @@ extends Control
 
 ## Uruchomienie układu nr 1
 func _on_play_button_pressed() -> void:
-	pass # Replace with function body.
+	GameManager.goto_scene("res://levels/level_1/level_1.tscn")
 
 
 ## Wyświetlenie strony z pomocą
