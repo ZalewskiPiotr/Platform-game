@@ -10,7 +10,8 @@ extends Node
 enum EnumScenes {
 	START_PAGE, 
 	LEVEL_1,
-	LEVEL_2
+	LEVEL_2,
+	TEST_LEVEL
 }
 #endregion
 
@@ -76,6 +77,8 @@ func _get_path_to_scene(scene : EnumScenes) -> String:
 		path = "res://scenes/start_page.tscn"
 	elif scene == EnumScenes.LEVEL_1:
 		path = "res://levels/level_1/level_1.tscn"
+	elif scene == EnumScenes.TEST_LEVEL:
+		path = "res://levels/test_level/test_level.tscn"
 	else:
 		path = ""
 	return path
