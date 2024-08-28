@@ -13,6 +13,6 @@ func _ready() -> void:
 	GlobalEvents.coin_collected.connect(_on_coin_collected)
 	_hud.show_score(GameManager.get_score())
 
-## Aktualziacja HUD w momencie zebrania coina
+## Aktualizacja HUD w momencie zebrania coina
 func _on_coin_collected() -> void:
 	_hud.show_score(GameManager.get_score())
