@@ -1,4 +1,5 @@
 extends Node
+class_name Level
 ## Skrypt, który zarządza tym co się dzieje w scenie levelu
 ##
 ## Dodatkowy opis :)

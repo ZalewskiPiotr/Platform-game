@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=4 uid="uid://bk6ln3evf8mkl"]
+
+[ext_resource type="PackedScene" uid="uid://cmlh0r3r7i64g" path="res://levels/level.tscn" id="1_pj0o5"]
+[ext_resource type="Script" path="res://levels/level_test_1.gd" id="2_somrx"]
+[ext_resource type="PackedScene" uid="uid://bnh1h838lc3ld" path="res://scenes/coin.tscn" id="3_ryw82"]
+[ext_resource type="PackedScene" uid="uid://c25tp1j133pcx" path="res://characters/player.tscn" id="4_m3u4b"]
+[ext_resource type="PackedScene" uid="uid://cm54u2dfjgr5g" path="res://scenes/door.tscn" id="5_rnup0"]
+
+[node name="LevelTest1" instance=ExtResource("1_pj0o5")]
+script = ExtResource("2_somrx")
+
+[node name="LayerFloor" parent="Layers" index="2"]
+tile_map_data = PackedByteArray("AAACACcAAAADAAIAAAADACcAAAADAAIAAAAEACcAAAADAAIAAAAFACcAAAADAAIAAAAGACcAAAADAAIAAAAHACcAAAADAAIAAAAIACcAAAADAAIAAAAJACcAAAADAAIAAAAKACcAAAADAAIAAAALACcAAAADAAIAAAAMACcAAAADAAIAAAANACcAAAADAAIAAAAOACcAAAADAAIAAAAPACcAAAADAAIAAAAQACcAAAADAAIAAAARACcAAAADAAIAAAASACcAAAADAAIAAAA=")
+
+[node name="Door" parent="Layers" index="5" instance=ExtResource("5_rnup0")]
+position = Vector2(288, 608)
+
+[node name="Coin" parent="Coins" index="0" instance=ExtResource("3_ryw82")]
+position = Vector2(136, 613)
+
+[node name="Coin2" parent="Coins" index="1" instance=ExtResource("3_ryw82")]
+position = Vector2(161, 613)
+
+[node name="Coin3" parent="Coins" index="2" instance=ExtResource("3_ryw82")]
+position = Vector2(189, 614)
+
+[node name="Player" parent="." index="5" instance=ExtResource("4_m3u4b")]
+position = Vector2(76, 569)
