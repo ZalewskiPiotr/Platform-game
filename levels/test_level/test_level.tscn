@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://kn4wkgh0chl7"]
+[gd_scene load_steps=21 format=4 uid="uid://kn4wkgh0chl7"]
 
 [ext_resource type="Texture2D" uid="uid://dn527uwrjjomy" path="res://assets/terrain/nature-paltformer-tileset-16x16.png" id="1_vior6"]
 [ext_resource type="PackedScene" uid="uid://c0saeybj026ke" path="res://platforms/platform_static.tscn" id="2_lx33k"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dbes4bgbkchtq" path="res://assets/terrain/staticObjects_.png" id="4_tml8i"]
 [ext_resource type="PackedScene" uid="uid://cq83g1aiyj14o" path="res://platforms/platform_moving.tscn" id="5_pmo4f"]
 [ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="7_7qqhb"]
+[ext_resource type="PackedScene" uid="uid://ckqjptmn6csby" path="res://scenes/hud.tscn" id="8_nnyh8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awlks"]
 texture = ExtResource("1_vior6")
@@ -288,3 +289,5 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 shape = SubResource("WorldBoundaryShape2D_fdmde")
+
+[node name="HUD" parent="." instance=ExtResource("8_nnyh8")]
