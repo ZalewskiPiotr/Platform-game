@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxqcqagx26tts"
-path="res://.godot/imported/Run (32x34).png-6f686fc42d43955c3e8845c0d68ab595.ctex"
+path="res://.godot/imported/Run (32x34).png-edbd0286c7559b609bc4efbdf0477e8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/Chicken/Run (32x34).png"
-dest_files=["res://.godot/imported/Run (32x34).png-6f686fc42d43955c3e8845c0d68ab595.ctex"]
+source_file="res://enemies/chicken/Run (32x34).png"
+dest_files=["res://.godot/imported/Run (32x34).png-edbd0286c7559b609bc4efbdf0477e8d.ctex"]
 
 [params]
 

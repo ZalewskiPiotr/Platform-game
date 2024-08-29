@@ -1,0 +1,149 @@
+[gd_scene load_steps=20 format=3 uid="uid://dqrd7hf22xgc0"]
+
+[ext_resource type="Script" path="res://enemies/chicken/chicken.gd" id="1_ldjds"]
+[ext_resource type="Texture2D" uid="uid://cxqcqagx26tts" path="res://enemies/chicken/Run (32x34).png" id="2_xcgts"]
+[ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="3_auk5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3a2v"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(0, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7h2e"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(32, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqe7c"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(64, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik488"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(96, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v0us"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(128, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2esjm"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(160, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drw83"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(192, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_163v8"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(224, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7770l"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(256, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi075"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(288, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfx7a"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(320, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjenf"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(352, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqymn"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(384, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf122"]
+atlas = ExtResource("2_xcgts")
+region = Rect2(416, 0, 32, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4gsy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3a2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7h2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqe7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik488")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v0us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2esjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drw83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_163v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7770l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi075")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfx7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjenf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqymn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf122")
+}],
+"loop": true,
+"name": &"run",
+"speed": 14.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nli3f"]
+radius = 13.0384
+
+[node name="Chicken" type="Node2D"]
+script = ExtResource("1_ldjds")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -17)
+sprite_frames = SubResource("SpriteFrames_a4gsy")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.153823
+
+[node name="KillZone" parent="." instance=ExtResource("3_auk5w")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_nli3f")
+metadata/_edit_lock_ = true
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -14)
+target_position = Vector2(-16, 0)
+
+[node name="RayCastLeftGround" type="RayCast2D" parent="."]
+position = Vector2(-11, -14)
+target_position = Vector2(0, 33)
+hit_from_inside = true
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -14)
+target_position = Vector2(16, 0)
+
+[node name="RayCastRightGround" type="RayCast2D" parent="."]
+position = Vector2(11, -14)
+target_position = Vector2(0, 32)
+hit_from_inside = true
