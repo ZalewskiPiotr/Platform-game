@@ -78,7 +78,7 @@ func _get_path_to_scene(scene : EnumScenes) -> String:
 	elif scene == EnumScenes.LEVEL_1:
 		path = "res://levels/level_1.tscn"
 	elif scene == EnumScenes.TEST_LEVEL:
-		path = "res://levels/test_level/test_level.tscn"
+		path = "res://levels/level_test_1.tscn"
 	else:
 		path = ""
 	return path

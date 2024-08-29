@@ -17,6 +17,9 @@ class_name Level
 @onready var _hud: CanvasLayer = $HUD	# Dostęp do HUD
 #endregion
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ESC"):
+		GameManager.goto_scene(GameManager.EnumScenes.START_PAGE)
 
 ## Podłączenie sygnałów i początkowe ustawienie informacji na HUD
 func _ready() -> void:
