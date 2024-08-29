@@ -21,7 +21,6 @@ texture = ExtResource("2_msknb")
 2:10/0 = 0
 3:10/0 = 0
 4:10/0 = 0
-5:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_r703i"]
 sources/0 = SubResource("TileSetAtlasSource_awlks")
