@@ -1,5 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dttx3gcqgleot"]
+[gd_scene load_steps=4 format=4 uid="uid://dttx3gcqgleot"]
 
 [ext_resource type="PackedScene" uid="uid://cmlh0r3r7i64g" path="res://levels/level.tscn" id="1_8h80g"]
+[ext_resource type="PackedScene" uid="uid://c25tp1j133pcx" path="res://characters/player.tscn" id="2_4byew"]
+[ext_resource type="PackedScene" uid="uid://cm54u2dfjgr5g" path="res://scenes/door.tscn" id="3_h87yv"]
 
 [node name="Level2" instance=ExtResource("1_8h80g")]
+
+[node name="LayerFloor" parent="Layers" index="2"]
+tile_map_data = PackedByteArray("AAAAACAAAAADAAIAAAABACAAAAAEAAIAAAACACAAAAAEAAIAAAADACAAAAAEAAIAAAAJACAAAAADAAIAAAAKACAAAAAEAAIAAAALACAAAAAEAAIAAAAMACAAAAAEAAIAAAANACAAAAAEAAIAAAAOACAAAAAEAAIAAAAPACAAAAAFAAIAAAAEACAAAAAFAAIAAAA=")
+
+[node name="Player" parent="." index="5" instance=ExtResource("2_4byew")]
+position = Vector2(35, 481)
+
+[node name="Door" parent="." index="6" instance=ExtResource("3_h87yv")]
+position = Vector2(239, 496)
+_door_to_level = 3
