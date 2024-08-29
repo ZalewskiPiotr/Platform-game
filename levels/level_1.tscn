@@ -33,3 +33,4 @@ position = Vector2(25, 587)
 
 [node name="Door" parent="." index="6" instance=ExtResource("10_scbk7")]
 position = Vector2(496, 608)
+_door_to_level = 2
