@@ -31,6 +31,7 @@ func _ready() -> void:
 	
 	# Ładowanie aktywnej sceny
 	_current_scene = _get_current_scene()
+	print(_current_scene)
 #endregion
 
 
@@ -89,6 +90,13 @@ func _get_path_to_scene(scene : EnumScenes) -> String:
 ## Zmiana sceny. Uusnięcie aktualnej sceny i załądowanie nowej	
 func _deferred_goto_scene(path : String) -> void:
 	# It is now safe to remove the current scene.
+	# Czasem obiekt _current_scene jest null. Spowodowane jest to użyciem metody
+	# 'reload_current_scene' np. w momencie śmierci gracza. W takim wypadku aktualna scena jest
+	# ładowana na nowo i tracona jest referencja do poprzedniej instancji sceny. Stąd sprawdzenie
+	# czy aktualna scena jest null. Jeżeli tak to należy pobrać ją na nowo. W miejscu jeszcze
+	# istnieje ona w drzewie na ostatniej pozycji.
+	if _current_scene == null:
+		_current_scene = _get_current_scene()
 	_current_scene.free()
 	# Load the new scene.
 	var res : Resource = ResourceLoader.load(path)
