@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsydfrh4upu5a"
-path="res://.godot/imported/Bullet.png-000e5c42725ec2965a6915a75451e0e8.ctex"
+uid="uid://bdxowhtj6bwcv"
+path="res://.godot/imported/Idle (36x34).png-eba7dbe5c242a8078cf38be3176e3014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/Bee/Bullet.png"
-dest_files=["res://.godot/imported/Bullet.png-000e5c42725ec2965a6915a75451e0e8.ctex"]
+source_file="res://enemies/bee/Idle (36x34).png"
+dest_files=["res://.godot/imported/Idle (36x34).png-eba7dbe5c242a8078cf38be3176e3014.ctex"]
 
 [params]
 
