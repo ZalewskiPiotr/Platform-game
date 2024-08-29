@@ -18,7 +18,9 @@ class_name Level
 #endregion
 
 func _input(event: InputEvent) -> void:
+	# Wyjście do menu głównego
 	if event.is_action_pressed("ESC"):
+		GameManager.reset_score()	# Trzeba wyzerować punkty
 		GameManager.goto_scene(GameManager.EnumScenes.START_PAGE)
 
 ## Podłączenie sygnałów i początkowe ustawienie informacji na HUD
