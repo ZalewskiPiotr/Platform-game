@@ -1,5 +1,6 @@
 extends Node2D
 
+## Czas pomiędzy atakami
 @export var cooldown = 2.0
 
 var bullet_scene = preload("res://enemies/ghost/ghost_projectile.tscn")
@@ -17,7 +18,7 @@ func _ready():
 
 func _on_shoot_timer_timeout():
 	var b = bullet_scene.instantiate()
-	get_tree().root.add_child(b)
+	get_tree().get_current_scene().add_child(b)
 	pos = Vector2(position.x, position.y - 15)
 	b.start(pos, dir)
 	$ShootTimer.start()
