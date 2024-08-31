@@ -6,7 +6,7 @@ extends AnimatableBody2D
 @export var _move_speed = 0.5
 var _move_direction = Vector2.LEFT
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_collide(_move_direction * _move_speed)
 
 
