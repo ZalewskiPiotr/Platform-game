@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://c761uxvvblv0d"]
+
+[ext_resource type="Texture2D" uid="uid://bdxowhtj6bwcv" path="res://assets/enemy/Bee/Idle (36x34).png" id="1_2ay15"]
+[ext_resource type="Script" path="res://enemies/bee/bee.gd" id="1_dipij"]
+[ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="2_nlaim"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o72qw"]
+atlas = ExtResource("1_2ay15")
+region = Rect2(0, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iabp8"]
+atlas = ExtResource("1_2ay15")
+region = Rect2(36, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2jv7"]
+atlas = ExtResource("1_2ay15")
+region = Rect2(72, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbn7k"]
+atlas = ExtResource("1_2ay15")
+region = Rect2(108, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xn0m"]
+atlas = ExtResource("1_2ay15")
+region = Rect2(144, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bbq4"]
+atlas = ExtResource("1_2ay15")
+region = Rect2(180, 0, 36, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mu4a3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o72qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iabp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2jv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbn7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xn0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bbq4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3upt2"]
+
+[node name="Bee" type="Node2D"]
+scale = Vector2(0.66, 0.66)
+script = ExtResource("1_dipij")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -17)
+sprite_frames = SubResource("SpriteFrames_mu4a3")
+autoplay = "default"
+frame_progress = 0.45918
+
+[node name="KillZone" parent="." instance=ExtResource("2_nlaim")]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_3upt2")
