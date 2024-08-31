@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bns1aarqbjhv3"]
+
+[ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="1_hcl2l"]
+[ext_resource type="Script" path="res://enemies/ghost/ghost_projectile.gd" id="2_13r0g"]
+[ext_resource type="Texture2D" uid="uid://c2ymol5mhq4o3" path="res://enemies/ghost/Gost Particles (48x16).png" id="3_k78yi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcc8j"]
+size = Vector2(5, 3)
+
+[node name="GhostProjectile" type="Node2D"]
+script = ExtResource("2_13r0g")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.6, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_k78yi")
+hframes = 4
+
+[node name="KillZone" parent="." instance=ExtResource("1_hcl2l")]
+position = Vector2(29.7663, -18.661)
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(-30.2663, 18.161)
+shape = SubResource("RectangleShape2D_tcc8j")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="area_entered" from="KillZone" to="." method="_on_kill_zone_area_entered"]
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
