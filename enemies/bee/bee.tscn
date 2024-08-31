@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c761uxvvblv0d"]
 
-[ext_resource type="Texture2D" uid="uid://bdxowhtj6bwcv" path="res://enemies/bee/Idle (36x34).png" id="1_2ay15"]
+[ext_resource type="Texture2D" uid="uid://bdxowhtj6bwcv" path="res://assets/enemy/Bee/Idle (36x34).png" id="1_2ay15"]
 [ext_resource type="Script" path="res://enemies/bee/bee.gd" id="1_dipij"]
 [ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="2_nlaim"]
 

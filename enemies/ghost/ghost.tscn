@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://boebiiiuubmjj"]
 
 [ext_resource type="Script" path="res://enemies/ghost/ghost.gd" id="1_muwtl"]
-[ext_resource type="Texture2D" uid="uid://bgdhk07rkaiw8" path="res://enemies/ghost/Idle (44x30).png" id="1_n0ibo"]
+[ext_resource type="Texture2D" uid="uid://bgdhk07rkaiw8" path="res://assets/enemy/Ghost/Idle (44x30).png" id="1_n0ibo"]
 [ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="2_h4xgl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdfij"]

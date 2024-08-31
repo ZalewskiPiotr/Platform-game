@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://dqrd7hf22xgc0"]
 
 [ext_resource type="Script" path="res://enemies/chicken/chicken.gd" id="1_ldjds"]
-[ext_resource type="Texture2D" uid="uid://cxqcqagx26tts" path="res://enemies/chicken/Run (32x34).png" id="2_xcgts"]
+[ext_resource type="Texture2D" uid="uid://cxqcqagx26tts" path="res://assets/enemy/Chicken/Run (32x34).png" id="2_xcgts"]
 [ext_resource type="PackedScene" uid="uid://1j6bocgcwg86" path="res://scenes/kill_zone.tscn" id="3_auk5w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3a2v"]
