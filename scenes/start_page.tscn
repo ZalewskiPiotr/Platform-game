@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnulpt6260m7e"]
+[gd_scene load_steps=4 format=3 uid="uid://dnulpt6260m7e"]
 
 [ext_resource type="Script" path="res://scenes/start_page.gd" id="1_isn73"]
+[ext_resource type="Theme" uid="uid://cqxawl3ghor6t" path="res://assets/themes/menu_theme.tres" id="2_di4e6"]
+[ext_resource type="Texture2D" uid="uid://d3blk3udwem5e" path="res://assets/general_assets/main_menu_bg.png" id="2_fbgfs"]
 
 [node name="StartPage" type="Control"]
 layout_mode = 3
@@ -11,7 +13,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_isn73")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.329412)
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 641.0
+texture = ExtResource("2_fbgfs")
+
+[node name="Title" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -432.0
+offset_top = 32.0
+offset_right = 432.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme = ExtResource("2_di4e6")
+
+[node name="GameTittle" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -11.5
+offset_right = 67.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "THE PLATFORM GAME"
+
+[node name="MainMenu" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,33 +56,78 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -124.0
-offset_top = -136.0
+offset_top = -68.0
 offset_right = 124.0
-offset_bottom = 136.0
+offset_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_di4e6")
 
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
+[node name="PlayButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Play"
 
-[node name="HelpButton" type="Button" parent="VBoxContainer"]
+[node name="HelpButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Help"
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+[node name="CreditsButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Credits"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 432.0
+offset_right = 1080.0
+offset_bottom = 536.0
+theme = ExtResource("2_di4e6")
+metadata/_edit_group_ = true
+
+[node name="Authors" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "Authors: PiotrZET, ZALEWA"
+
+[node name="Version" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+grow_horizontal = 2
+text = "Version: 1.0.0"
+
+[node name="GithubLink" type="LinkButton" parent="Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 64.0
+offset_right = 159.0
+offset_bottom = 88.0
+text = "GitHub link"
+underline = 1
+uri = "https://github.com/ZalewskiPiotr/Platform-game/wiki"
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenu/HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMenu/ExitButton" to="." method="_on_exit_button_pressed"]
