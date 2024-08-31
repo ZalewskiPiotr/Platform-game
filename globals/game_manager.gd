@@ -87,7 +87,9 @@ func _get_path_to_scene(scene : EnumScenes) -> String:
 	return path
 	
 	
-## Zmiana sceny. Uusnięcie aktualnej sceny i załądowanie nowej	
+## Zmiana sceny. Uusnięcie aktualnej sceny i załadowanie nowej.
+## Z uwagi na to, że w tej funkcji jest wołana metoda '.free()', nie można bezpośrednio wywoływać
+## tej funkcji. Zawsze musi to być wywołanie: call_deferred("_deferred_goto_scene", path)
 func _deferred_goto_scene(path : String) -> void:
 	# It is now safe to remove the current scene.
 	# Czasem obiekt _current_scene jest null. Spowodowane jest to użyciem metody
@@ -115,6 +117,13 @@ func _get_current_scene() -> Node:
 	var root : Window = get_tree().root
 	var node = root.get_child(root.get_child_count() - 1)
 	return node
+
+
+## Przeładowanie aktualnej sceny	
+func _reload_current_scene() -> void:
+	var scene : Node = get_tree().current_scene
+	var path_to_scene : String = scene.scene_file_path
+	call_deferred("_deferred_goto_scene", path_to_scene)
 #endregion
 
 
@@ -123,3 +132,4 @@ func _get_current_scene() -> Node:
 func _on_player_hit() -> void:
 	print("Gracz został trafiony")
 	self.reset_score()
+	_reload_current_scene() # Gracz ma jedno życie. Po śmierci gracza ładujemy układ na nowo.
