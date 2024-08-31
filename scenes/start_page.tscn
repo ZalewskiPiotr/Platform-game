@@ -55,6 +55,50 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Exit"
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 408.0
+offset_right = 1080.0
+offset_bottom = 512.0
+theme = ExtResource("2_di4e6")
+metadata/_edit_group_ = true
+
+[node name="Authors" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "Authors: PiotrZET, ZALEWA"
+
+[node name="Version" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+grow_horizontal = 2
+text = "Version: 1.0.0"
+
+[node name="GithubLink" type="LinkButton" parent="Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 64.0
+offset_right = 159.0
+offset_bottom = 88.0
+text = "GitHub link"
+underline = 1
+uri = "https://github.com/ZalewskiPiotr/Platform-game/wiki"
+metadata/_edit_group_ = true
+
 [connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenu/HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
