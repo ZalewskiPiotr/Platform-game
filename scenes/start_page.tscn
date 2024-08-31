@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnulpt6260m7e"]
+[gd_scene load_steps=4 format=3 uid="uid://dnulpt6260m7e"]
 
 [ext_resource type="Script" path="res://scenes/start_page.gd" id="1_isn73"]
+[ext_resource type="Theme" uid="uid://cqxawl3ghor6t" path="res://assets/themes/menu_theme.tres" id="2_di4e6"]
+[ext_resource type="Texture2D" uid="uid://d3blk3udwem5e" path="res://assets/general_assets/main_menu_bg.png" id="2_fbgfs"]
 
 [node name="StartPage" type="Control"]
 layout_mode = 3
@@ -11,7 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_isn73")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.329412)
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 641.0
+texture = ExtResource("2_fbgfs")
+
+[node name="MainMenu" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -24,28 +33,29 @@ offset_right = 124.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_di4e6")
 
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
+[node name="PlayButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Play"
 
-[node name="HelpButton" type="Button" parent="VBoxContainer"]
+[node name="HelpButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Help"
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+[node name="CreditsButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Credits"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainMenu/HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMenu/ExitButton" to="." method="_on_exit_button_pressed"]
