@@ -20,4 +20,3 @@ func _on_body_entered(body: Node2D) -> void:
 	print("You are in kill zone!!!")
 	print(body.name)
 	GlobalEvents.player_hit.emit()
-	get_tree().reload_current_scene() # TODO: Docelowo zamiast restartu sceny tutaj powinno być wyjście do menu głównego albo zostawić tylko wywołanie sygnału trafienia a wyjściem do menu głównego niech się zajmie 'game_manager'
