@@ -364,6 +364,8 @@ tile_set = SubResource("TileSet_xomf4")
 
 [node name="Coins" type="Node" parent="."]
 
+[node name="Enemies" type="Node" parent="."]
+
 [node name="KillZone" parent="." instance=ExtResource("8_otosy")]
 position = Vector2(93, 647)
 metadata/_edit_group_ = true
