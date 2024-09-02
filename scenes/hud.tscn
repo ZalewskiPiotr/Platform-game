@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckqjptmn6csby"]
+[gd_scene load_steps=3 format=3 uid="uid://ckqjptmn6csby"]
 
 [ext_resource type="Script" path="res://scenes/hud.gd" id="1_2t3mb"]
+[ext_resource type="Theme" uid="uid://cqxawl3ghor6t" path="res://assets/themes/menu_theme.tres" id="2_133ar"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_2t3mb")
@@ -13,4 +14,6 @@ offset_left = -30.0
 offset_right = 30.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme = ExtResource("2_133ar")
+theme_override_font_sizes/font_size = 20
 text = "SCORE: "
