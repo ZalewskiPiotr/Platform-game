@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cm54u2dfjgr5g" path="res://scenes/door.tscn" id="3_h87yv"]
 
 [node name="Level2" instance=ExtResource("1_8h80g")]
+_level_number = 2
 
 [node name="LayerFloor" parent="Layers" index="2"]
 tile_map_data = PackedByteArray("AAAAACAAAAADAAIAAAABACAAAAAEAAIAAAACACAAAAAEAAIAAAADACAAAAAEAAIAAAAJACAAAAADAAIAAAAKACAAAAAEAAIAAAALACAAAAAEAAIAAAAMACAAAAAEAAIAAAANACAAAAAEAAIAAAAOACAAAAAEAAIAAAAPACAAAAAFAAIAAAAEACAAAAAFAAIAAAA=")
