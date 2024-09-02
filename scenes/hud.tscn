@@ -1,16 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckqjptmn6csby"]
+[gd_scene load_steps=3 format=3 uid="uid://ckqjptmn6csby"]
 
 [ext_resource type="Script" path="res://scenes/hud.gd" id="1_2t3mb"]
+[ext_resource type="Theme" uid="uid://cqxawl3ghor6t" path="res://assets/themes/menu_theme.tres" id="2_133ar"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_2t3mb")
 
-[node name="Score" type="Label" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -30.0
-offset_right = 30.0
-offset_bottom = 23.0
+offset_left = -168.0
+offset_right = 168.0
+offset_bottom = 26.0
 grow_horizontal = 2
-text = "SCORE: "
+theme = ExtResource("2_133ar")
+
+[node name="Level" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "LEVEL:"
+
+[node name="Score" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 20
+text = "SCORE:"

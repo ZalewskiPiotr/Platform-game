@@ -14,7 +14,8 @@ class_name Level
 ## i napisać przeciążone lub nowe metody
 
 #region Stałe i zmienne
-@onready var _hud: CanvasLayer = $HUD	# Dostęp do HUD
+@onready var _hud : CanvasLayer = $HUD	# Dostęp do HUD
+@export var _level_number : int # Numer układu. Musi być ustawiony ręcznie przez programistę
 #endregion
 
 func _input(event: InputEvent) -> void:
@@ -27,6 +28,7 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	GlobalEvents.coin_collected.connect(_on_coin_collected)
 	_hud.show_score(GameManager.get_score())
+	_hud.set_level(_level_number)
 
 ## Aktualizacja HUD w momencie zebrania coina
 func _on_coin_collected() -> void:
