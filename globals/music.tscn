@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://euxjt238gv7a"]
+
+[ext_resource type="AudioStream" uid="uid://deymrhgd1vekr" path="res://assets/audio/music/Around the World.mp3" id="1_yfbau"]
+[ext_resource type="AudioStream" uid="uid://y14pn36dqqi3" path="res://assets/audio/music/Its my world.mp3" id="2_onx65"]
+[ext_resource type="AudioStream" uid="uid://byedacfnqubgs" path="res://assets/audio/music/Juhani Junkala.wav" id="3_tncld"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vtvhh"]
+streams_count = 3
+stream_0/stream = ExtResource("1_yfbau")
+stream_1/stream = ExtResource("2_onx65")
+stream_2/stream = ExtResource("3_tncld")
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamRandomizer_vtvhh")
+volume_db = -5.943
+autoplay = true
