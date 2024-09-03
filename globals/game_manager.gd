@@ -131,5 +131,6 @@ func _reload_current_scene() -> void:
 ## powinno nastąpić wyjście do menu głównego gry
 func _on_player_hit() -> void:
 	print("Gracz został trafiony")
+	AudioSfx.player_death()
 	self.reset_score()
 	_reload_current_scene() # Gracz ma jedno życie. Po śmierci gracza ładujemy układ na nowo.
