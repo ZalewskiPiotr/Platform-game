@@ -16,7 +16,8 @@ func _on_help_button_pressed() -> void:
 
 ## Wyświetlenie gry z opisem assetów
 func _on_credits_button_pressed() -> void:
-	pass # Replace with function body.
+	Music.play()
+	#pass # Replace with function body.
 
 
 ## Wyjście z gry
