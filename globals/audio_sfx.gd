@@ -6,12 +6,13 @@ extends AudioStreamPlayer2D
 
 #region Stałe i zmienne
 const SFX_COIN_COLLECTED : AudioStreamWAV = preload("res://assets/audio/sfx/coin.wav")
+const SFX_PLAYER_JUMP : AudioStreamOggVorbis = preload("res://assets/audio/sfx/jump.ogg")
 #endregion
 
 ## Odegranie wskazanego dźwięku
 ## 
 ## Metoda prywatne, która odgrywa wskazany dźwięk o podanej głośności
-func _make_player(stream : AudioStreamWAV, volume : float) -> void:
+func _make_player(stream : AudioStream, volume : float) -> void:
 	var sfx_player = AudioStreamPlayer.new()
 	sfx_player.stream = stream
 	sfx_player.name = "sfx_player"
@@ -25,3 +26,6 @@ func _make_player(stream : AudioStreamWAV, volume : float) -> void:
 ## Dźwięk w momencie podniesienia coina
 func coin_collected() -> void:
 	_make_player(SFX_COIN_COLLECTED, 0.0)
+
+func player_jump() -> void:
+	_make_player(SFX_PLAYER_JUMP, 0.0)

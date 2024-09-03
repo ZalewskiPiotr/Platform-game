@@ -34,6 +34,7 @@ func _jump(delta: float) -> void:
 	# Przechwycenie komendy skoku - jeżeli gracz jest na podłodze
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		AudioSfx.player_jump()
 
 
 ## Funkcja odpowiada za poruszanie postacią gracza w lewo i prawo
