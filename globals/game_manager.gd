@@ -11,6 +11,7 @@ enum EnumScenes {
 	START_PAGE, 
 	LEVEL_1,
 	LEVEL_2,
+	LEVEL_3,
 	TEST_LEVEL
 }
 #endregion
@@ -80,6 +81,8 @@ func _get_path_to_scene(scene : EnumScenes) -> String:
 		path = "res://levels/level_1.tscn"
 	elif scene == EnumScenes.LEVEL_2:
 		path = "res://levels/level_2.tscn"
+	elif scene == EnumScenes.LEVEL_3:
+		path = "res://levels/level_3.tscn"
 	elif scene == EnumScenes.TEST_LEVEL:
 		path = "res://levels/level_test_1.tscn"
 	else:
