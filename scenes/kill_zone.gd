@@ -17,6 +17,7 @@ extends Area2D
 ## skończyć grę
 ## @param: body - obiekt, który wszedł na dany obszar KillZone
 func _on_body_entered(body: Node2D) -> void:
-	print("You are in kill zone!!!")
 	print(body.name)
-	GlobalEvents.player_hit.emit()
+	if body.name == "Player":
+		print("You are in kill zone!!!")
+		GlobalEvents.player_hit.emit()
