@@ -315,13 +315,13 @@ position = Vector2(600, 136)
 position = Vector2(616, 136)
 
 [node name="Coin97" parent="Coins" index="96" instance=ExtResource("3_pwagq")]
-position = Vector2(744, 144)
+position = Vector2(744, 136)
 
 [node name="Coin98" parent="Coins" index="97" instance=ExtResource("3_pwagq")]
-position = Vector2(760, 144)
+position = Vector2(760, 136)
 
 [node name="Coin99" parent="Coins" index="98" instance=ExtResource("3_pwagq")]
-position = Vector2(776, 144)
+position = Vector2(776, 136)
 
 [node name="Coin100" parent="Coins" index="99" instance=ExtResource("3_pwagq")]
 position = Vector2(584, 232)
