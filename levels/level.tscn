@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmlh0r3r7i64g"]
+[gd_scene load_steps=21 format=3 uid="uid://cmlh0r3r7i64g"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_4hfsp"]
 [ext_resource type="Texture2D" uid="uid://dn527uwrjjomy" path="res://assets/terrain/nature-paltformer-tileset-16x16.png" id="2_msknb"]
@@ -338,6 +338,20 @@ texture = ExtResource("4_n7o2p")
 sources/0 = SubResource("TileSetAtlasSource_5i5fw")
 sources/1 = SubResource("TileSetAtlasSource_c1ndh")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8aub"]
+texture = ExtResource("2_msknb")
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -8, 4, -8, 4, 8, -4, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -8, 4, -8, 4, 8, -4, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -8, 4, -8, 4, 8, -4, 8)
+
+[sub_resource type="TileSet" id="TileSet_np7er"]
+physics_layer_0/collision_layer = 64
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_n8aub")
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dk40v"]
 
 [node name="Level" type="Node"]
@@ -359,6 +373,9 @@ tile_set = SubResource("TileSet_oubgh")
 
 [node name="LayerDecorations" type="TileMapLayer" parent="Layers"]
 tile_set = SubResource("TileSet_xomf4")
+
+[node name="LayerLadder" type="TileMapLayer" parent="Layers"]
+tile_set = SubResource("TileSet_np7er")
 
 [node name="MovingPlatforms" type="Node" parent="."]
 

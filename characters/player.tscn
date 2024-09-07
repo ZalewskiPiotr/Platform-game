@@ -1,17 +1,27 @@
-[gd_scene load_steps=22 format=3 uid="uid://c25tp1j133pcx"]
+[gd_scene load_steps=33 format=3 uid="uid://c25tp1j133pcx"]
 
 [ext_resource type="Texture2D" uid="uid://bgllvuc60a00a" path="res://assets/character/idle/Character1M_1_idle_0.png" id="1_4npsl"]
 [ext_resource type="Script" path="res://characters/player.gd" id="1_xl3ku"]
 [ext_resource type="Texture2D" uid="uid://b8vcf12eawoa3" path="res://assets/character/idle/Character1M_1_idle_1.png" id="2_ai4pk"]
+[ext_resource type="Texture2D" uid="uid://cpwiuxpp35eg6" path="res://assets/character/climb/Character1M_1_climb_0.png" id="2_wp4a2"]
 [ext_resource type="Texture2D" uid="uid://b1h1xa4bonupa" path="res://assets/character/idle/Character1M_1_idle_2.png" id="3_fl41s"]
+[ext_resource type="Texture2D" uid="uid://dlr6bbotccd1v" path="res://assets/character/climb/Character1M_1_climb_1.png" id="3_hs8fl"]
 [ext_resource type="Texture2D" uid="uid://1whgmbot61sy" path="res://assets/character/idle/Character1M_1_idle_3.png" id="4_esovl"]
+[ext_resource type="Texture2D" uid="uid://icrh406v181a" path="res://assets/character/climb/Character1M_1_climb_2.png" id="4_nmpmd"]
+[ext_resource type="Texture2D" uid="uid://d0tnpyl6dn1nu" path="res://assets/character/climb/Character1M_1_climb_3.png" id="5_g1j3x"]
 [ext_resource type="Texture2D" uid="uid://5mea67te858m" path="res://assets/character/idle/Character1M_1_idle_4.png" id="5_wyb6f"]
 [ext_resource type="Texture2D" uid="uid://v3hu7p5ocsvk" path="res://assets/character/idle/Character1M_1_idle_5.png" id="6_6rlv6"]
+[ext_resource type="Texture2D" uid="uid://bc37va1mny4gc" path="res://assets/character/climb/Character1M_1_climb_4.png" id="6_n62qx"]
 [ext_resource type="Texture2D" uid="uid://dinhl78vd5jj" path="res://assets/character/idle/Character1M_1_idle_6.png" id="7_33whj"]
+[ext_resource type="Texture2D" uid="uid://by4w7a80tyx3d" path="res://assets/character/climb/Character1M_1_climb_5.png" id="7_vvmm8"]
+[ext_resource type="Texture2D" uid="uid://p6dedc7h80p7" path="res://assets/character/climb/Character1M_1_climb_6.png" id="8_ejl1m"]
 [ext_resource type="Texture2D" uid="uid://ckjbnhx05w750" path="res://assets/character/idle/Character1M_1_idle_7.png" id="8_xn0ad"]
 [ext_resource type="Texture2D" uid="uid://cshmo2gr6vaxq" path="res://assets/character/jump/Character1M_1_jump_0.png" id="9_logcd"]
+[ext_resource type="Texture2D" uid="uid://bxevtmdbfgmk5" path="res://assets/character/climb/Character1M_1_climb_7.png" id="9_rx1v6"]
+[ext_resource type="Texture2D" uid="uid://ij3yldcijqed" path="res://assets/character/climb/Character1M_1_climb_8.png" id="10_bqvos"]
 [ext_resource type="Texture2D" uid="uid://cylq0d8ave8nu" path="res://assets/character/jump/Character1M_1_jump_1.png" id="10_dv3fx"]
 [ext_resource type="Texture2D" uid="uid://bm4bqs102ydow" path="res://assets/character/run/Character1M_1_run_0.png" id="11_dgdfq"]
+[ext_resource type="Texture2D" uid="uid://ccyybot6jtr3b" path="res://assets/character/climb/Character1M_1_climb_9.png" id="11_rlbra"]
 [ext_resource type="Texture2D" uid="uid://bk6gnyaqsv45i" path="res://assets/character/run/Character1M_1_run_1.png" id="12_2s2nt"]
 [ext_resource type="Texture2D" uid="uid://sxojgds61ayc" path="res://assets/character/run/Character1M_1_run_2.png" id="13_oox1s"]
 [ext_resource type="Texture2D" uid="uid://dufj7i1bpvjje" path="res://assets/character/run/Character1M_1_run_3.png" id="14_tevgb"]
@@ -22,6 +32,41 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dp40a"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wp4a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hs8fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nmpmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g1j3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n62qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vvmm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ejl1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rx1v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bqvos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rlbra")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_4npsl")
@@ -95,6 +140,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vv5yc"]
 size = Vector2(17, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3q08a"]
+size = Vector2(8, 28)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 collision_layer = 16
@@ -117,3 +165,15 @@ limit_left = 0
 limit_top = -70
 limit_right = 1150
 limit_bottom = 640
+
+[node name="LadderChecker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderChecker"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_3q08a")
+debug_color = Color(0.646223, 0.354196, 0.960358, 0.42)
+
+[connection signal="body_entered" from="LadderChecker" to="." method="_on_ladder_checker_body_entered"]
+[connection signal="body_exited" from="LadderChecker" to="." method="_on_ladder_checker_body_exited"]
