@@ -23,10 +23,6 @@ tile_map_data = PackedByteArray("AAAAABgAAAAGAAEAAAAAABkAAAAGAAEAAAAAABoAAAAGAAE
 [node name="LayerStaticPlatforms" parent="Layers" index="3"]
 tile_map_data = PackedByteArray("AAAUAB4AAQAAAAAAAQAUABsAAQAAAAAAAQAUABgAAQAAAAAAAQAkAB0AAQAAAAAAAQA0ACMAAQAAAAAAAQA0ACAAAQAAAAAAAQA0AB0AAQAAAAAAAQA0ABoAAQAAAAAAAQA0ABcAAQAAAAAAAQA0ABQAAQAAAAAAAQA0ABEAAQAAAAAAAQA0AA4AAQAAAAAAAQA0AAsAAQAAAAAAAQAKABUAAQAAAAAAAQAKABIAAQAAAAAAAQANABAAAQAAAAAAAQA=")
 
-[node name="Door" parent="Layers" index="5" instance=ExtResource("2_yu3hp")]
-position = Vector2(1120, 32)
-_door_to_level = 4
-
 [node name="Coin" parent="Coins" index="0" instance=ExtResource("3_pwagq")]
 position = Vector2(24, 600)
 
@@ -430,3 +426,7 @@ flight_time = 15.0
 
 [node name="Player" parent="." index="6" instance=ExtResource("2_tnpyv")]
 position = Vector2(25, 367)
+
+[node name="Door" parent="." index="7" instance=ExtResource("2_yu3hp")]
+position = Vector2(1120, 32)
+_door_to_level = 6

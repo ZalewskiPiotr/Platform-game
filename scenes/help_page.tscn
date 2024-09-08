@@ -1,0 +1,259 @@
+[gd_scene load_steps=14 format=3 uid="uid://8gvh0s3g7uy7"]
+
+[ext_resource type="Script" path="res://scenes/help_page.gd" id="1_5lgli"]
+[ext_resource type="Texture2D" uid="uid://d3blk3udwem5e" path="res://assets/general_assets/main_menu_bg.png" id="1_i4cuk"]
+[ext_resource type="Theme" uid="uid://cqxawl3ghor6t" path="res://assets/themes/menu_theme.tres" id="2_weger"]
+[ext_resource type="Texture2D" uid="uid://cxyqyt6yeuiye" path="res://assets/keyboard/arrow_left_light.png" id="3_m53rk"]
+[ext_resource type="Texture2D" uid="uid://dkyots2dm6pmp" path="res://assets/keyboard/a_key_light.png" id="4_lq35e"]
+[ext_resource type="Texture2D" uid="uid://cxlmjb7hhyway" path="res://assets/keyboard/arrow_right_light.png" id="5_0rxvs"]
+[ext_resource type="Texture2D" uid="uid://c6vpdtimk5of6" path="res://assets/keyboard/d_light.png" id="6_vads8"]
+[ext_resource type="Texture2D" uid="uid://cbpwmo7n1uphp" path="res://assets/keyboard/arrow_up_light.png" id="7_y26kn"]
+[ext_resource type="Texture2D" uid="uid://0tdwgyw6m4f8" path="res://assets/keyboard/w_light.png" id="8_ee6pr"]
+[ext_resource type="Texture2D" uid="uid://7c77dqq7krte" path="res://assets/keyboard/arrow_down_light.png" id="9_3461d"]
+[ext_resource type="Texture2D" uid="uid://ce8qjkf66172b" path="res://assets/keyboard/s_light.png" id="10_fa00b"]
+[ext_resource type="Texture2D" uid="uid://dbmivmn0twh0t" path="res://assets/keyboard/space_light.png" id="11_bxexn"]
+[ext_resource type="Texture2D" uid="uid://u6decs7u5its" path="res://assets/keyboard/escape_light.png" id="12_vk6vg"]
+
+[node name="HelpPage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5lgli")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.329412)
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 641.0
+texture = ExtResource("1_i4cuk")
+
+[node name="Title" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 152.0
+offset_top = 16.0
+offset_right = 1016.0
+offset_bottom = 144.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("2_weger")
+
+[node name="HelpLabel" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -48.0
+offset_right = 399.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "HELP"
+horizontal_alignment = 1
+
+[node name="PanelInstructions" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 64.0
+offset_top = 176.0
+offset_right = 568.0
+offset_bottom = 536.0
+theme = ExtResource("2_weger")
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelInstructions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[wave][pulse][p align=center][b]The game instructions[/b][/p][/pulse][/wave]
+
+[p align=left]Your task is to collect as many coins as you can. Watch out for enemies, water and an off-screen area. You don't have any way to kill enemies. Just avoid them and collect coins.[/p]
+
+When you find a door you will go to the next level. The game has 5 levels. If you enter the door in the fifth level, you will go back to the first level.
+
+Every time you die, you lose all of your points."
+
+[node name="PanelKeys" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 608.0
+offset_top = 176.0
+offset_right = 1112.0
+offset_bottom = 536.0
+theme = ExtResource("2_weger")
+
+[node name="RichTextTitle" type="RichTextLabel" parent="PanelKeys"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -304.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[wave][pulse][p align=center][b]The game controls[/b][/p][/pulse][/wave]"
+
+[node name="Left" type="Node" parent="PanelKeys"]
+
+[node name="TextureLeft1" type="TextureRect" parent="PanelKeys/Left"]
+offset_left = 632.0
+offset_top = 257.0
+offset_right = 670.0
+offset_bottom = 298.0
+texture = ExtResource("3_m53rk")
+stretch_mode = 2
+
+[node name="TextureLeft2" type="TextureRect" parent="PanelKeys/Left"]
+offset_left = 672.0
+offset_top = 256.0
+offset_right = 710.0
+offset_bottom = 297.0
+texture = ExtResource("4_lq35e")
+stretch_mode = 2
+
+[node name="LabelLeft" type="Label" parent="PanelKeys/Left"]
+offset_left = 736.0
+offset_top = 261.0
+offset_right = 776.0
+offset_bottom = 289.0
+theme_override_font_sizes/font_size = 20
+text = "Left"
+
+[node name="Right" type="Node" parent="PanelKeys"]
+
+[node name="TextureRight1" type="TextureRect" parent="PanelKeys/Right"]
+offset_left = 632.0
+offset_top = 304.0
+offset_right = 670.0
+offset_bottom = 345.0
+texture = ExtResource("5_0rxvs")
+stretch_mode = 2
+
+[node name="TextureRight2" type="TextureRect" parent="PanelKeys/Right"]
+offset_left = 672.0
+offset_top = 304.0
+offset_right = 710.0
+offset_bottom = 345.0
+texture = ExtResource("6_vads8")
+stretch_mode = 2
+
+[node name="LabelRight" type="Label" parent="PanelKeys/Right"]
+offset_left = 736.0
+offset_top = 309.0
+offset_right = 787.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 20
+text = "Right"
+
+[node name="Up" type="Node" parent="PanelKeys"]
+
+[node name="TextureUp1" type="TextureRect" parent="PanelKeys/Up"]
+offset_left = 848.0
+offset_top = 256.0
+offset_right = 886.0
+offset_bottom = 297.0
+texture = ExtResource("7_y26kn")
+stretch_mode = 2
+
+[node name="TextureUp2" type="TextureRect" parent="PanelKeys/Up"]
+offset_left = 888.0
+offset_top = 256.0
+offset_right = 926.0
+offset_bottom = 297.0
+texture = ExtResource("8_ee6pr")
+stretch_mode = 2
+
+[node name="LabelUp" type="Label" parent="PanelKeys/Up"]
+offset_left = 952.0
+offset_top = 261.0
+offset_right = 1060.0
+offset_bottom = 289.0
+theme_override_font_sizes/font_size = 20
+text = "Up (ladder)"
+
+[node name="Down" type="Node" parent="PanelKeys"]
+
+[node name="TextureDown1" type="TextureRect" parent="PanelKeys/Down"]
+offset_left = 848.0
+offset_top = 304.0
+offset_right = 886.0
+offset_bottom = 345.0
+texture = ExtResource("9_3461d")
+stretch_mode = 2
+
+[node name="TextureDown2" type="TextureRect" parent="PanelKeys/Down"]
+offset_left = 888.0
+offset_top = 304.0
+offset_right = 926.0
+offset_bottom = 345.0
+texture = ExtResource("10_fa00b")
+stretch_mode = 2
+
+[node name="LabelDown" type="Label" parent="PanelKeys/Down"]
+offset_left = 952.0
+offset_top = 309.0
+offset_right = 1089.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 20
+text = "Down (ladder)"
+
+[node name="Space" type="Node" parent="PanelKeys"]
+
+[node name="TextureSpace" type="TextureRect" parent="PanelKeys/Space"]
+offset_left = 720.0
+offset_top = 392.0
+offset_right = 864.0
+offset_bottom = 433.0
+texture = ExtResource("11_bxexn")
+stretch_mode = 2
+
+[node name="LabelSpace" type="Label" parent="PanelKeys/Space"]
+offset_left = 888.0
+offset_top = 397.0
+offset_right = 939.0
+offset_bottom = 425.0
+theme_override_font_sizes/font_size = 20
+text = "Jump"
+
+[node name="Esc" type="Node" parent="PanelKeys"]
+
+[node name="TextureEsc" type="TextureRect" parent="PanelKeys/Esc"]
+offset_left = 720.0
+offset_top = 448.0
+offset_right = 758.0
+offset_bottom = 489.0
+texture = ExtResource("12_vk6vg")
+stretch_mode = 2
+
+[node name="LabelEsc" type="Label" parent="PanelKeys/Esc"]
+offset_left = 784.0
+offset_top = 453.0
+offset_right = 991.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 20
+text = "Exit to previous screen"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 552.0
+offset_right = 712.0
+offset_bottom = 619.0
+theme = ExtResource("2_weger")
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
