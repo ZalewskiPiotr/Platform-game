@@ -23,6 +23,18 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ESC"):
 		GameManager.reset_score()	# Trzeba wyzerować punkty
 		GameManager.goto_scene(GameManager.EnumScenes.START_PAGE)
+	if event.is_action_pressed("HiddenPassage"):
+		match _level_number:
+			1:
+				GameManager.goto_scene(GameManager.EnumScenes.LEVEL_2)
+			2:
+				GameManager.goto_scene(GameManager.EnumScenes.LEVEL_3)
+			3:
+				GameManager.goto_scene(GameManager.EnumScenes.LEVEL_4)
+			4:
+				GameManager.goto_scene(GameManager.EnumScenes.LEVEL_5)
+			5:
+				GameManager.goto_scene(GameManager.EnumScenes.LEVEL_1)
 
 ## Podłączenie sygnałów i początkowe ustawienie informacji na HUD
 func _ready() -> void:

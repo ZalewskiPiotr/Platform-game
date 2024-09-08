@@ -8,7 +8,9 @@ extends Node
 
 #region Enumeratory
 enum EnumScenes {
-	START_PAGE, 
+	START_PAGE,
+	HELP_PAGE,
+	CREDITS_PAGE, 
 	LEVEL_1,
 	LEVEL_2,
 	LEVEL_3,
@@ -79,6 +81,10 @@ func _get_path_to_scene(scene : EnumScenes) -> String:
 	var path : String
 	if scene == EnumScenes.START_PAGE:
 		path = "res://scenes/start_page.tscn"
+	elif scene == EnumScenes.HELP_PAGE:
+		path = "res://scenes/help_page.tscn"
+	elif scene == EnumScenes.CREDITS_PAGE:
+		path = "res://scenes/credits_page.tscn"
 	elif scene == EnumScenes.LEVEL_1:
 		path = "res://levels/level_1.tscn"
 	elif scene == EnumScenes.LEVEL_2:
