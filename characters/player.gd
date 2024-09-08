@@ -24,9 +24,10 @@ func _physics_process(delta: float) -> void:
 		States.OFF:
 			if should_climb_ladder():
 				state = States.ON
-			_jump(delta)
-			_move(direction)
-			_play_animation(direction)
+			else:
+				_jump(delta)
+				_move(direction)
+				_play_animation(direction)
 		States.ON:
 			if not on_ladder:
 				state = States.OFF
@@ -39,11 +40,12 @@ func _physics_process(delta: float) -> void:
 				Input.action_release("move_up")
 				velocity.y = JUMP_VELOCITY
 				state = States.OFF
-			if Input.is_action_pressed("move_down") or Input.is_action_pressed("move_up") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
-				_animated_sprite.play("climb")
 			else:
-				_animated_sprite.stop()
-			_ladder_move()
+				if Input.is_action_pressed("move_down") or Input.is_action_pressed("move_up") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
+					_animated_sprite.play("climb")
+				else:
+					_animated_sprite.stop()
+				_ladder_move()
 #endregion
 
 
