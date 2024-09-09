@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Platform game"
+config/name="The Platform Game"
+config/description="This is a short game about collecting coins."
+config/version="1.0.0"
 run/main_scene="res://scenes/start_page.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/general_assets/main_menu_bg.png"
 
 [autoload]
 
