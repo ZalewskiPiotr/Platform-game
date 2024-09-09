@@ -1,0 +1,182 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6mi6xr14bkrn"]
+
+[ext_resource type="Script" path="res://scenes/credits_page.gd" id="1_ht0j7"]
+[ext_resource type="Texture2D" uid="uid://d3blk3udwem5e" path="res://assets/general_assets/main_menu_bg.png" id="2_5fr20"]
+[ext_resource type="Theme" uid="uid://cqxawl3ghor6t" path="res://assets/themes/menu_theme.tres" id="3_b67gt"]
+
+[node name="CreditsPage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ht0j7")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.329412)
+offset_right = 1149.0
+offset_bottom = 641.0
+texture = ExtResource("2_5fr20")
+
+[node name="Title" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 152.0
+offset_top = 16.0
+offset_right = 1016.0
+offset_bottom = 144.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_b67gt")
+
+[node name="CreditsLabel" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -48.0
+offset_right = 399.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 552.0
+offset_right = 712.0
+offset_bottom = 619.0
+theme = ExtResource("3_b67gt")
+text = "Back"
+
+[node name="PanelCredits" type="Panel" parent="."]
+offset_left = 64.0
+offset_top = 176.0
+offset_right = 568.0
+offset_bottom = 448.0
+theme = ExtResource("3_b67gt")
+
+[node name="Label" type="Label" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 242.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 20
+text = "Character and enemy:"
+
+[node name="Label2" type="Label" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 194.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 20
+text = "Game graphics:"
+
+[node name="Label3" type="Label" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 176.0
+offset_right = 194.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 20
+text = "Music:"
+
+[node name="Label5" type="Label" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 240.0
+offset_right = 194.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 20
+text = "Fonts:"
+
+[node name="LinkButton" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 16.0
+offset_right = 386.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 20
+text = "muchopixels.itch.io"
+uri = "https://muchopixels.itch.io/character-animation-asset-pack"
+
+[node name="LinkButton6" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 80.0
+offset_right = 419.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 20
+text = "rottingpixels.itch.io"
+uri = "https://rottingpixels.itch.io/nature-platformer-tileset"
+
+[node name="LinkButton7" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 112.0
+offset_right = 429.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 20
+text = "analogstudios.itch.io"
+uri = "https://analogstudios.itch.io/four-seasons-platformer-tileset"
+
+[node name="LinkButton8" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 144.0
+offset_right = 433.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 20
+text = "thepeeps191.itch.io"
+uri = "https://thepeeps191.itch.io/spinning-coin"
+
+[node name="LinkButton2" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 48.0
+offset_right = 386.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 20
+text = "pixelfrog-assets.itch.io"
+uri = "https://pixelfrog-assets.itch.io/pixel-adventure-2"
+
+[node name="LinkButton3" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 176.0
+offset_right = 386.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 20
+text = "It's my world"
+uri = "https://opengameart.org/content/its-my-world"
+
+[node name="LinkButton4" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 208.0
+offset_right = 386.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 20
+text = "Around the world"
+uri = "https://opengameart.org/content/around-the-world"
+
+[node name="LinkButton5" type="LinkButton" parent="PanelCredits"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 240.0
+offset_right = 386.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 20
+text = "Adventure font"
+uri = "https://www.dafont.com/adventure.font"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
