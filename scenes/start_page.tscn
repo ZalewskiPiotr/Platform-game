@@ -114,7 +114,7 @@ offset_top = 40.0
 offset_right = 40.0
 offset_bottom = 63.0
 grow_horizontal = 2
-text = "Version: 1.0.0"
+text = "Version: 1.0.1"
 
 [node name="GithubLink" type="LinkButton" parent="Panel"]
 layout_mode = 0
